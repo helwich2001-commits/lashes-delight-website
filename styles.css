@@ -5,16 +5,16 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  --bg:        #faf8f5;
-  --bg-soft:   #f2ede6;
-  --ink:       #1c1410;
-  --ink-soft:  #4a3f38;
-  --muted:     #8a7b72;
-  --line:      #e4dbd2;
-  --rose:      #7a2d45;
-  --rose-dark: #541e30;
-  --gold:      #c9a96e;
-  --gold-lt:   #ddc08a;
+  --bg:        #fdfcfa;
+  --bg-soft:   #f5f2ed;
+  --ink:       #0e0c0a;
+  --ink-soft:  #3a3530;
+  --muted:     #8a8078;
+  --line:      #e0d8cc;
+  --rose:      #1a1410;
+  --rose-dark: #000000;
+  --gold:      #b8963e;
+  --gold-lt:   #d4ae5c;
   --white:     #ffffff;
 }
 
@@ -59,11 +59,11 @@ nav.site-nav{
 }
 .nav-links a:hover{color:var(--rose)}
 .nav-links a.nav-cta{
-  background:var(--rose);color:var(--white);
+  background:var(--gold);color:var(--white);
   padding:0.5rem 1.2rem;border-radius:2px;
   letter-spacing:0.06em;transition:background .2s;
 }
-.nav-links a.nav-cta:hover{background:var(--rose-dark)}
+.nav-links a.nav-cta:hover{background:#9a7a28}
 
 /* ───── HERO ───── */
 .hero{
@@ -145,7 +145,7 @@ nav.site-nav{
 
 /* ───── TRUST BAR ───── */
 .trust{
-  background:var(--rose);color:var(--white);
+  background:var(--ink);color:var(--white);
   display:flex;gap:2rem;flex-wrap:wrap;
   padding:1.2rem 3rem;justify-content:center;
   font-size:0.78rem;letter-spacing:0.06em;
@@ -241,7 +241,7 @@ nav.site-nav{
 
 /* ───── TESTIMONIAL ───── */
 .testimonial{
-  background:var(--rose);color:var(--white);
+  background:var(--ink);color:var(--white);
   padding:5rem 3rem;text-align:center;
 }
 .testimonial blockquote{
