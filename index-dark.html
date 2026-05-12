@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lashes Delight · Sacred Beauty Studio · Mittelbiberach</title>
+  <meta name="description" content="Lashes Delight von Valeria Gerzen — Wimpernverlängerung, Sugaring und Lomi Lomi Massage in Mittelbiberach. Seit 2015. Termin über WhatsApp." />
+  <link rel="canonical" href="https://www.lashes-delight.de/" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+
+    *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #080604;
+      --bg-2:     #0d0b08;
+      --bg-3:     #121009;
+      --ink:      #ffffff;
+      --muted:    rgba(255,255,255,0.45);
+      --gold:     #b8963e;
+      --gold-lt:  #d4ae5c;
+      --line:     rgba(184,150,62,0.18);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1,h2,h3 { font-family: 'Fraunces', serif; font-weight: 300; line-height: 1.1; }
+    h1 { font-size: clamp(3.5rem, 8vw, 7.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 3rem); }
+    h3 { font-size: 1.2rem; font-weight: 400; }
+    em { font-style: italic; color: var(--gold); }
+    p { color: var(--muted); line-height: 1.75; }
+
+    /* ── NAV ── */
+    nav.dl-nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 2.5rem;
+      background: rgba(8,6,4,0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .dl-nav-logo {
+      height: 52px; width: auto; display: block;
+      filter: invert(1) sepia(0.3) saturate(1.5) hue-rotate(5deg);
+      opacity: 0.88;
+      transition: opacity .2s;
+    }
+    .dl-nav-logo:hover { opacity: 1; }
+    .dl-nav-links {
+      list-style: none;
+      display: flex; align-items: center; gap: 2.2rem;
+    }
+    .dl-nav-links a {
+      font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+      text-decoration: none; color: var(--muted); transition: color .2s;
+    }
+    .dl-nav-links a:hover { color: var(--gold); }
+    .dl-nav-cta {
+      border: 1px solid var(--gold) !important;
+      color: var(--gold) !important;
+      padding: 0.45rem 1.1rem;
+      border-radius: 1px;
+      transition: background .2s, color .2s !important;
+    }
+    .dl-nav-cta:hover { background: var(--gold) !important; color: #000 !important; }
+
+    /* ── HERO ── */
+    .dl-hero {
+      position: relative;
+      height: 100vh; min-height: 600px;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+    }
+    .dl-hero-bg {
+      position: absolute; inset: 0;
+      background: url('images/HERO%20NEW.PNG') center/cover no-repeat;
+      opacity: 0.18;
+    }
+    .dl-hero-vignette {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at center, transparent 30%, rgba(8,6,4,0.9) 100%);
+    }
+    .dl-hero-content {
+      position: relative; z-index: 2;
+      max-width: 900px; padding: 2rem;
+    }
+    .dl-eyebrow {
+      display: block;
+      font-size: 0.65rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 2.5rem;
+    }
+    .dl-hero-content h1 { color: #fff; margin-bottom: 2rem; }
+    .dl-hero-divider {
+      width: 60px; height: 1px;
+      background: var(--gold);
+      margin: 0 auto 2rem;
+      opacity: 0.6;
+    }
+    .dl-hero-sub {
+      font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 3rem;
+    }
+    .dl-btn-outline {
+      display: inline-block;
+      font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--gold); color: var(--gold);
+      padding: 1rem 2.8rem; border-radius: 1px;
+      transition: background .25s, color .25s;
+    }
+    .dl-btn-outline:hover { background: var(--gold); color: #000; }
+
+    /* ── LABEL ── */
+    .dl-label {
+      display: block;
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.8rem;
+    }
+
+    /* ── MENU SECTION ── */
+    .dl-menu {
+      padding: 6rem 2rem;
+      background: var(--bg-2);
+    }
+    .dl-menu-inner {
+      max-width: 1000px; margin: 0 auto;
+    }
+    .dl-menu-head {
+      display: grid;
+      grid-template-columns: 3rem 1fr auto auto;
+      gap: 2rem;
+      align-items: center;
+      padding-bottom: 1.2rem;
+      margin-bottom: 0;
+    }
+    .dl-menu-head span {
+      font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+    }
+    .dl-menu-head span:first-child { color: transparent; }
+    .dl-item {
+      display: grid;
+      grid-template-columns: 3rem 1fr auto auto;
+      gap: 2rem;
+      align-items: center;
+      padding: 2.2rem 0;
+      border-top: 1px solid var(--line);
+      text-decoration: none; color: inherit;
+      transition: all .2s;
+      cursor: pointer;
+    }
+    .dl-item:last-child { border-bottom: 1px solid var(--line); }
+    .dl-item:hover .dl-item-name { color: var(--gold); }
+    .dl-item:hover .dl-item-arrow { opacity: 1; transform: translateX(4px); }
+    .dl-item-num {
+      font-family: 'Fraunces', serif;
+      font-size: 0.78rem;
+      color: rgba(184,150,62,0.45);
+      letter-spacing: 0.05em;
+    }
+    .dl-item-body { display: flex; flex-direction: column; gap: 0.35rem; }
+    .dl-item-name {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      color: #fff;
+      transition: color .2s;
+      line-height: 1.15;
+    }
+    .dl-item-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.03em;
+    }
+    .dl-item-dur {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      text-align: right;
+    }
+    .dl-item-price {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      color: var(--gold);
+      white-space: nowrap;
+      text-align: right;
+    }
+    .dl-item-arrow {
+      display: inline-block;
+      opacity: 0;
+      color: var(--gold);
+      font-size: 0.9rem;
+      transition: opacity .2s, transform .2s;
+      margin-left: 0.5rem;
+    }
+
+    /* ── FEATURE IMAGE + QUOTE ── */
+    .dl-feature {
+      position: relative;
+      height: 65vh; min-height: 420px;
+      overflow: hidden;
+    }
+    .dl-feature-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+    }
+    .dl-feature-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to right,
+        rgba(8,6,4,0.97) 0%,
+        rgba(8,6,4,0.75) 50%,
+        rgba(8,6,4,0.3) 100%
+      );
+    }
+    .dl-feature-content {
+      position: relative; z-index: 2;
+      height: 100%;
+      display: flex; align-items: center;
+      padding: 3rem 4rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .dl-feature-content blockquote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: clamp(1.5rem, 3vw, 2.6rem);
+      color: #fff;
+      line-height: 1.3;
+      max-width: 580px;
+    }
+    .dl-feature-content blockquote em { color: var(--gold-lt); font-style: normal; }
+    .dl-feature-content cite {
+      display: block;
+      margin-top: 1.8rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-style: normal;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ── PREISE ── */
+    .dl-preise {
+      padding: 6rem 2rem;
+      background: var(--bg);
+    }
+    .dl-preise-inner {
+      max-width: 900px; margin: 0 auto;
+    }
+    .dl-preise-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1.5rem; margin-bottom: 3rem;
+    }
+    .dl-preise-head h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+    .dl-preise-head a {
+      font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gold); text-decoration: none;
+      border-bottom: 1px solid rgba(184,150,62,0.4);
+      padding-bottom: 1px; transition: opacity .2s;
+    }
+    .dl-preise-head a:hover { opacity: 0.7; }
+    .dl-preise-cols {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 3rem 4rem;
+    }
+    .dl-preise-block h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); font-weight: 400;
+      margin-bottom: 1rem;
+    }
+    .dl-pr {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.85rem; color: rgba(255,255,255,0.65);
+    }
+    .dl-pr:first-of-type { border-top: 1px solid rgba(255,255,255,0.07); }
+    .dl-pr-price {
+      font-family: 'Fraunces', serif;
+      font-size: 0.98rem; color: rgba(255,255,255,0.9);
+      white-space: nowrap;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .dl-testi {
+      padding: 6rem 2rem;
+      background: var(--bg-3);
+    }
+    .dl-testi-inner { max-width: 1100px; margin: 0 auto; }
+    .dl-testi-inner h2 { margin-top: 0.5rem; margin-bottom: 3rem; }
+    .dl-testi-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1.5rem;
+    }
+    .dl-testi-card {
+      border: 1px solid var(--line);
+      padding: 2.2rem;
+      border-radius: 1px;
+      display: flex; flex-direction: column; gap: 1.5rem;
+      transition: border-color .2s;
+    }
+    .dl-testi-card:hover { border-color: rgba(184,150,62,0.45); }
+    .dl-testi-card blockquote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.7; flex: 1;
+    }
+    .dl-testi-card cite {
+      font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); font-style: normal;
+    }
+
+    /* ── ÜBER MICH ── */
+    .dl-about {
+      padding: 5rem 2rem;
+      background: var(--bg-2);
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+    }
+    .dl-about-inner { max-width: 600px; }
+    .dl-about-inner h2 { margin: 0.5rem 0 1.2rem; }
+    .dl-about-quote {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .dl-about-meta {
+      font-size: 0.78rem; color: var(--muted);
+      letter-spacing: 0.05em;
+      line-height: 1.8;
+    }
+    .dl-creds {
+      display: flex; flex-wrap: wrap; gap: 0.5rem;
+      justify-content: center; margin-top: 1.5rem;
+    }
+    .dl-cred {
+      font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+      border: 1px solid var(--line); color: var(--gold);
+      padding: 0.3rem 0.8rem; border-radius: 1px;
+    }
+
+    /* ── KONTAKT ── */
+    .dl-kontakt {
+      background: var(--gold);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+    .dl-kontakt .dl-label { color: rgba(10,8,4,0.45); }
+    .dl-kontakt h2 {
+      color: #0a0804;
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 0.8rem;
+    }
+    .dl-kontakt p { color: rgba(10,8,4,0.65); margin-bottom: 2.5rem; font-size: 1rem; }
+    .dl-btn-dark {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+      text-decoration: none;
+      background: #0a0804; color: #fff;
+      padding: 1rem 2.8rem; border-radius: 1px;
+      transition: background .2s;
+    }
+    .dl-btn-dark:hover { background: #000; }
+    .dl-kontakt-meta {
+      margin-top: 2rem;
+      display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;
+      font-size: 0.72rem; color: rgba(10,8,4,0.45); letter-spacing: 0.05em;
+    }
+    .whatsapp-icon {
+      display: inline-block; width: 16px; height: 16px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z'/%3E%3C/svg%3E") no-repeat center/contain;
+    }
+
+    /* ── FOOTER ── */
+    footer.dl-footer {
+      background: #040302;
+      color: rgba(255,255,255,0.3);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 2rem 3rem; gap: 2rem; flex-wrap: wrap;
+      font-size: 0.75rem; letter-spacing: 0.05em;
+      border-top: 1px solid var(--line);
+    }
+    .dl-footer-logo {
+      height: 44px; width: auto;
+      filter: invert(1) sepia(0.3) saturate(1.5) hue-rotate(5deg);
+      opacity: 0.5;
+    }
+    .dl-footer-nav { display: flex; gap: 1.5rem; }
+    .dl-footer-nav a {
+      color: rgba(255,255,255,0.3); text-decoration: none;
+      transition: color .2s;
+    }
+    .dl-footer-nav a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      nav.dl-nav { padding: 1rem 1.5rem; }
+      .dl-nav-links li:not(:last-child) { display: none; }
+      .dl-item { grid-template-columns: 2.5rem 1fr auto; gap: 1rem; }
+      .dl-item-dur { display: none; }
+      .dl-preise-cols { grid-template-columns: 1fr; gap: 2rem; }
+      .dl-testi-grid { grid-template-columns: 1fr; }
+      .dl-feature-content { padding: 2rem 1.5rem; }
+      .dl-feature-overlay {
+        background: rgba(8,6,4,0.85);
+      }
+      footer.dl-footer { flex-direction: column; text-align: center; }
+      .dl-kontakt-meta { flex-direction: column; gap: 0.4rem; }
+      .dl-menu-head { display: none; }
+    }
+    @media (max-width: 480px) {
+      .dl-item { grid-template-columns: 2rem 1fr auto; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="dl-nav">
+  <a href="index.html"><img src="images/Lashes%20delight%20Logo.png" alt="Lashes Delight" class="dl-nav-logo"></a>
+  <ul class="dl-nav-links">
+    <li><a href="wimpern.html">Wimpern</a></li>
+    <li><a href="sugaring.html">Sugaring</a></li>
+    <li><a href="lomi-lomi.html">Lomi Lomi</a></li>
+    <li><a href="aphrodite.html">Aphrodite</a></li>
+    <li><a href="preise.html">Preise</a></li>
+    <li><a href="#kontakt" class="dl-nav-cta">Termin anfragen</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="dl-hero">
+  <div class="dl-hero-bg"></div>
+  <div class="dl-hero-vignette"></div>
+  <div class="dl-hero-content">
+    <span class="dl-eyebrow">Sacred Beauty Studio · Mittelbiberach · seit 2015</span>
+    <h1>Beauty,<br>die man <em>fühlt.</em></h1>
+    <div class="dl-hero-divider"></div>
+    <p class="dl-hero-sub">Wimpernverlängerung · Sugaring · Lomi Lomi · Mittelbiberach</p>
+    <a href="#kontakt" class="dl-btn-outline">Termin anfragen</a>
+  </div>
+</section>
+
+<!-- BEHANDLUNGEN ALS MENÜ -->
+<section class="dl-menu" id="angebote">
+  <div class="dl-menu-inner">
+    <span class="dl-label">Behandlungen</span>
+    <h2 style="margin-bottom:3rem">Was ich für dich tue.</h2>
+
+    <div class="dl-menu-head">
+      <span>&nbsp;</span>
+      <span>Behandlung</span>
+      <span>Dauer</span>
+      <span>Preis</span>
+    </div>
+
+    <a href="wimpern.html" class="dl-item">
+      <span class="dl-item-num">01</span>
+      <div class="dl-item-body">
+        <span class="dl-item-name">Wimpernverlängerung<span class="dl-item-arrow">→</span></span>
+        <span class="dl-item-desc">Natural Look · Soft Volume · Lash Lifting</span>
+      </div>
+      <span class="dl-item-dur">ab 90 min</span>
+      <span class="dl-item-price">ab 122 €</span>
+    </a>
+
+    <a href="sugaring.html" class="dl-item">
+      <span class="dl-item-num">02</span>
+      <div class="dl-item-body">
+        <span class="dl-item-name">Sugaring<span class="dl-item-arrow">→</span></span>
+        <span class="dl-item-desc">Natürliche Zuckerpaste · alle Körperstellen</span>
+      </div>
+      <span class="dl-item-dur">ab 20 min</span>
+      <span class="dl-item-price">ab 25 €</span>
+    </a>
+
+    <a href="lomi-lomi.html" class="dl-item">
+      <span class="dl-item-num">03</span>
+      <div class="dl-item-body">
+        <span class="dl-item-name">Lomi Lomi Nui<span class="dl-item-arrow">→</span></span>
+        <span class="dl-item-desc">Hawaiianische Ganzkörpermassage</span>
+      </div>
+      <span class="dl-item-dur">90 min</span>
+      <span class="dl-item-price">169 €</span>
+    </a>
+
+    <a href="aphrodite.html" class="dl-item">
+      <span class="dl-item-num">04</span>
+      <div class="dl-item-body">
+        <span class="dl-item-name">Aphrodite Collection<span class="dl-item-arrow">→</span></span>
+        <span class="dl-item-desc">Ritual-Öl · Yoni Ei · Love-Set · handgefertigt</span>
+      </div>
+      <span class="dl-item-dur">&nbsp;</span>
+      <span class="dl-item-price">ab 49 €</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- FEATURE BILD MIT ZITAT -->
+<div class="dl-feature">
+  <div class="dl-feature-bg" style="background-image:url('images/lomi%20lomi%20nui.PNG')"></div>
+  <div class="dl-feature-overlay"></div>
+  <div class="dl-feature-content">
+    <blockquote>
+      „Ein ruhiger, stilvoller Raum —<br>
+      für <em>gepflegte Schönheit</em><br>und neue Ausstrahlung."
+      <cite>— Valeria Gerzen · Lashes Delight</cite>
+    </blockquote>
+  </div>
+</div>
+
+<!-- PREISE -->
+<section class="dl-preise" id="preise">
+  <div class="dl-preise-inner">
+    <div class="dl-preise-head">
+      <h2>Preise.</h2>
+      <a href="preise.html">Vollständige Liste →</a>
+    </div>
+    <div class="dl-preise-cols">
+      <div>
+        <div class="dl-preise-block">
+          <h3>Wimpernverlängerung</h3>
+          <div class="dl-pr"><span>Natural Look — Neuanlage</span><span class="dl-pr-price">122 €</span></div>
+          <div class="dl-pr"><span>Soft Volume — Neuanlage</span><span class="dl-pr-price">155 €</span></div>
+          <div class="dl-pr"><span>Natural Look — Nachfüllen</span><span class="dl-pr-price">68 €</span></div>
+          <div class="dl-pr"><span>Soft Volume — Nachfüllen</span><span class="dl-pr-price">89 €</span></div>
+          <div class="dl-pr"><span>Lash Lifting</span><span class="dl-pr-price">39 €</span></div>
+          <div class="dl-pr"><span>Entfernung</span><span class="dl-pr-price">15 €</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="dl-preise-block">
+          <h3>Sugaring</h3>
+          <div class="dl-pr"><span>Damen-Intimzone komplett</span><span class="dl-pr-price">60 €</span></div>
+          <div class="dl-pr"><span>Bikinizone</span><span class="dl-pr-price">30 €</span></div>
+          <div class="dl-pr"><span>Beine ganz</span><span class="dl-pr-price">65 €</span></div>
+          <div class="dl-pr"><span>Beine halb</span><span class="dl-pr-price">40 €</span></div>
+          <div class="dl-pr"><span>Achseln</span><span class="dl-pr-price">25 €</span></div>
+        </div>
+        <div class="dl-preise-block" style="margin-top:2.5rem">
+          <h3>Lomi Lomi Nui</h3>
+          <div class="dl-pr"><span>Ganzkörper · 90 Minuten</span><span class="dl-pr-price">169 €</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="dl-testi">
+  <div class="dl-testi-inner">
+    <span class="dl-label">Kundenstimmen</span>
+    <h2>Was Frauen sagen.</h2>
+    <div class="dl-testi-grid">
+      <div class="dl-testi-card">
+        <blockquote>„Natürlich schön. Ausdrucksstark. Individuell — genau das bekomme ich hier jedes Mal."</blockquote>
+        <cite>Stammkundin · Wimpernverlängerung</cite>
+      </div>
+      <div class="dl-testi-card">
+        <blockquote>„Die Lomi Lomi Massage bei Valeria ist ein Erlebnis, das ich nicht missen möchte. Tief entspannend und wohltuend."</blockquote>
+        <cite>Kundin · Lomi Lomi Nui</cite>
+      </div>
+      <div class="dl-testi-card">
+        <blockquote>„Endlich Sugaring, das wirklich nicht wehtut. Ich komme seit 3 Jahren regelmäßig — immer top."</blockquote>
+        <cite>Stammkundin · Sugaring</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section class="dl-about">
+  <div class="dl-about-inner">
+    <span class="dl-label">Über mich</span>
+    <h2>Valeria Gerzen</h2>
+    <p class="dl-about-quote">„Seit 2015 ist Lashes Delight mein Ort für bewusste Schönheit — sorgfältig, individuell, mit echtem Herzblut."</p>
+    <p class="dl-about-meta">
+      Mo–Fr 09:00–18:00 · Sa 09:00–14:00<br>
+      Industriestr. 52 · 88441 Mittelbiberach
+    </p>
+    <div class="dl-creds">
+      <span class="dl-cred">Wimpernverlängerung</span>
+      <span class="dl-cred">Sugaring</span>
+      <span class="dl-cred">Lomi Lomi Nui</span>
+      <span class="dl-cred">seit 2015</span>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section class="dl-kontakt" id="kontakt">
+  <span class="dl-label">Termin buchen</span>
+  <h2>Bereit für deinen Termin?</h2>
+  <p>Schreib mir über WhatsApp — ich antworte persönlich und schnell.</p>
+  <a href="https://wa.me/491708029609?text=Hallo%20Valeria%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20bei%20Lashes%20Delight%20vereinbaren." class="dl-btn-dark">
+    <span class="whatsapp-icon"></span> Über WhatsApp anfragen
+  </a>
+  <div class="dl-kontakt-meta">
+    <span>Mo–Fr 09–18 Uhr</span>
+    <span>Sa 09–14 Uhr</span>
+    <span>Industriestr. 52 · 88441 Mittelbiberach</span>
+  </div>
+</section>
+
+<footer class="dl-footer">
+  <img src="images/Lashes%20delight%20Logo.png" alt="Lashes Delight" class="dl-footer-logo">
+  <p>© 2026 Lashes Delight · Valeria Gerzen · Mittelbiberach</p>
+  <nav class="dl-footer-nav">
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+  </nav>
+</footer>
+
+</body>
+</html>
