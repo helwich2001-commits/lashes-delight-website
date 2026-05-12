@@ -50,7 +50,7 @@ nav.site-nav{
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(201,169,110,0.15);
 }
-.nav-logo{height:88px;width:auto;display:block;transition:opacity .2s;mix-blend-mode:multiply}
+.nav-logo{height:88px;width:auto;display:block;transition:opacity .2s}
 .nav-logo:hover{opacity:0.75}
 .nav-links{list-style:none;display:flex;align-items:center;gap:2rem}
 .nav-links a{
