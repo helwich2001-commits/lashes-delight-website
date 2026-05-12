@@ -16,7 +16,7 @@
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     "name": "Lashes Delight",
-    "description": "Wimpernverlängerung, Sugaring und Lomi Lomi Massage in Mittelbiberach.",
+    "description": "Professionelle Wimpernverlängerung, Sugaring und Lomi Lomi Massage in Mittelbiberach. Seit 2015.",
     "url": "https://www.lashes-delight.de",
     "telephone": "+491708029609",
     "founder": { "@type": "Person", "name": "Valeria Gerzen" },
@@ -27,9 +27,28 @@
       "postalCode": "88441",
       "addressCountry": "DE"
     },
-    "areaServed": ["Biberach", "Laupheim", "Ulm", "Mittelbiberach"],
-    "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-14:00"],
-    "priceRange": "€€"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "addressCountry": "DE",
+      "addressRegion": "Baden-Württemberg"
+    },
+    "areaServed": ["Biberach", "Laupheim", "Ulm", "Mittelbiberach", "Biberach an der Riß"],
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "14:00" }
+    ],
+    "priceRange": "€€",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Beauty-Behandlungen",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wimpernverlängerung Natural Look" }, "price": "122", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wimpernverlängerung Soft Volume" }, "price": "155", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lash Lifting" }, "price": "39", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sugaring Intimzone" }, "price": "60", "priceCurrency": "EUR" },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lomi Lomi Nui Massage" }, "price": "169", "priceCurrency": "EUR" }
+      ]
+    }
   }
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
