@@ -20,6 +20,7 @@
     <li><a href="preise.html">Preise</a></li>
     <li><a href="index.html#kontakt" class="nav-cta">Termin anfragen</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
 </nav>
 
 <div class="legal-page">
@@ -67,6 +68,7 @@
       <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
       <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
     </ul>
+  <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
     <p>
       Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: valeria.gerzen@ey-va.de<br>
       Sie haben außerdem das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren:
@@ -91,5 +93,11 @@
   </nav>
 </footer>
 
+<script>
+  document.querySelector(".nav-toggle").addEventListener("click",function(){
+    document.querySelector(".nav-links").classList.toggle("open");
+    this.textContent=document.querySelector(".nav-links").classList.contains("open")?"✕":"☰";
+  });
+</script>
 </body>
 </html>

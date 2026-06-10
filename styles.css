@@ -412,10 +412,31 @@ footer.site-footer{
 .legal-page a{color:var(--gold);text-decoration:none;border-bottom:1px solid transparent}
 .legal-page a:hover{border-bottom-color:var(--gold)}
 
+/* ───── MOBILE NAV TOGGLE ───── */
+.nav-toggle{
+  display:none;
+  background:none;border:none;cursor:pointer;
+  padding:0.3rem 0.4rem;
+  color:var(--ink);font-size:1.6rem;line-height:1;
+  z-index:101;
+}
+
 /* ───── RESPONSIVE ───── */
 @media(max-width:900px){
   nav.site-nav{padding:1rem 1.5rem}
-  .nav-links li:not(:last-child){display:none}
+  .nav-toggle{display:block}
+  .nav-links{
+    display:none;
+    position:fixed;inset:0;
+    background:#faf8f5;
+    flex-direction:column;
+    justify-content:center;align-items:center;
+    gap:2.5rem;z-index:100;
+  }
+  .nav-links.open{display:flex}
+  .nav-links li{display:block!important}
+  .nav-links a{font-size:1.2rem;letter-spacing:0.1em}
+  .nav-links a.nav-cta{padding:0.9rem 2.2rem!important;font-size:1rem!important}
   .hero,.subpage-hero{grid-template-columns:1fr;padding:8rem 1.5rem 3rem;gap:2rem}
   .hero > div:first-child,.subpage-hero > div:first-child{padding:0}
   .hero-image{aspect-ratio:3/2;order:-1}

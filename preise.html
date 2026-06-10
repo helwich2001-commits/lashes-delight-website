@@ -51,6 +51,7 @@
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="#kontakt" class="nav-cta">Termin anfragen</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
 </nav>
 
 <div style="padding:8rem 2rem 1rem;max-width:1100px;margin:0 auto">
@@ -165,5 +166,11 @@
   </nav>
 </footer>
 
+<script>
+  document.querySelector(".nav-toggle").addEventListener("click",function(){
+    document.querySelector(".nav-links").classList.toggle("open");
+    this.textContent=document.querySelector(".nav-links").classList.contains("open")?"✕":"☰";
+  });
+</script>
 </body>
 </html>

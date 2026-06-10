@@ -43,6 +43,7 @@
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="#kontakt" class="nav-cta">Termin anfragen</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
 </nav>
 
 <section class="subpage-hero">
@@ -134,6 +135,7 @@
           <li>Mit regelmäßigen Terminen wächst das Haar feiner nach</li>
           <li>Geeignet für empfindliche Haut</li>
         </ul>
+  <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
       </div>
       <div class="col-block warm">
         <h3>Bitte beachten</h3>
@@ -143,6 +145,7 @@
           <li>Kein Selbstbräuner 48 h vorher</li>
           <li>Bei aktiver Akne oder offener Haut bitte vorher fragen</li>
         </ul>
+  <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
       </div>
     </div>
   </div>
@@ -168,5 +171,11 @@
   </nav>
 </footer>
 
+<script>
+  document.querySelector(".nav-toggle").addEventListener("click",function(){
+    document.querySelector(".nav-links").classList.toggle("open");
+    this.textContent=document.querySelector(".nav-links").classList.contains("open")?"✕":"☰";
+  });
+</script>
 </body>
 </html>
