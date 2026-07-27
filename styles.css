@@ -13,8 +13,8 @@
   --line:      #e0d8cc;
   --rose:      #1a1410;
   --rose-dark: #000000;
-  --gold:      #b8963e;
-  --gold-lt:   #d4ae5c;
+  --gold:      #7a9a80;
+  --gold-lt:   #a0bcaa;
   --white:     #ffffff;
 }
 
@@ -48,7 +48,7 @@ nav.site-nav{
   padding:1.2rem 2.5rem;
   background:#faf8f5;
   backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(201,169,110,0.15);
+  border-bottom:1px solid rgba(122,154,128,0.15);
 }
 .nav-logo{height:88px;width:auto;display:block;transition:opacity .2s}
 .nav-logo:hover{opacity:0.75}
@@ -63,7 +63,7 @@ nav.site-nav{
   padding:0.5rem 1.2rem;border-radius:2px;
   letter-spacing:0.06em;transition:background .2s;
 }
-.nav-links a.nav-cta:hover{background:#9a7a28}
+.nav-links a.nav-cta:hover{background:#527a5e}
 
 /* ───── HERO ───── */
 .hero{
@@ -133,7 +133,7 @@ nav.site-nav{
 }
 .btn-ghost:hover{border-color:var(--rose);color:var(--rose)}
 .btn-gold{background:var(--gold);color:var(--white)}
-.btn-gold:hover{background:#b8913a}
+.btn-gold:hover{background:#527a5e}
 .arrow{transition:transform .2s}
 .btn:hover .arrow{transform:translateX(4px)}
 
@@ -187,7 +187,7 @@ nav.site-nav{
 .service-link{
   font-size:0.78rem;letter-spacing:0.08em;text-transform:uppercase;
   color:var(--gold);text-decoration:none;
-  border-bottom:1px solid rgba(201,169,110,0.4);padding-bottom:2px;
+  border-bottom:1px solid rgba(122,154,128,0.4);padding-bottom:2px;
   transition:color .2s, border-color .2s;
 }
 .service-link:hover{color:var(--rose);border-color:var(--rose)}
@@ -225,7 +225,7 @@ nav.site-nav{
 /* ───── TWO COL ───── */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2rem}
 .col-block{background:var(--white);border:1px solid var(--line);border-radius:3px;padding:2rem}
-.col-block.warm{background:rgba(250,248,245,0.7);border-color:rgba(201,169,110,0.25)}
+.col-block.warm{background:rgba(250,248,245,0.7);border-color:rgba(122,154,128,0.25)}
 .col-block h3{font-size:0.9rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem}
 
 /* ───── CHECKLIST ───── */
